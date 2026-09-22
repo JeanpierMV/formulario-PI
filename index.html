@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Abe Urban Food - Registro de Insumos</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gestión de Insumos - Don Abe Urban Food</h2>
+        <form action="" method="get" class="form-container" id="insumoForm">
+            
+            <div class="form-group">
+                <label for="nombreInsumo">Nombre del Insumo:</label>
+                <input type="text" id="nombreInsumo" placeholder="Ingrese el nombre del insumo" required minlength="3" maxlength="50">
+            </div>
+
+            <div class="form-group">
+                <label for="stockMinimo">Stock Mínimo (Alerta):</label>
+                <input type="number" id="stockMinimo" placeholder="Ingrese el stock mínimo" required min="1" max="10000">
+            </div>
+
+            <div class="form-group">
+                <label for="precioUnitario">Costo Unitario (COP):</label>
+                <input type="number" id="precioUnitario" placeholder="Ingrese el costo" required min="1" max="100000000">
+            </div>
+
+            <div class="form-group">
+                <label for="categoria">Categoría de Insumo:</label>
+                <select id="categoria" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="carnes">Carnes y Proteínas</option>
+                    <option value="panaderia">Panadería y Masas</option>
+                    <option value="vegetales">Vegetales y Frescos</option>
+                    <option value="salsas">Salsas y Aderezos</option>
+                    <option value="otros">Otros Insumos</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="descripcion">Descripción / Proveedor sugerido:</label>
+                <textarea id="descripcion" placeholder="Ingrese detalles o proveedor del insumo" required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="imagen">Imagen del Insumo:</label>
+                <input type="file" id="imagen" accept="image/*" required>
+                <img class="preview-img" id="previewImg" alt="Vista previa">
+            </div>
+
+            <div class="button-container">
+                <button id="btnAgregar" type="submit">Registrar Insumo</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="js/formulario.js"></script>
+</body>
+</html>
